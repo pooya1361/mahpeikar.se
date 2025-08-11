@@ -1,5 +1,5 @@
 // src/App.tsx
-import { faCaretUp, faEnvelope, faPersonDigging, faRoadBarrier, faTruck } from '@fortawesome/free-solid-svg-icons';
+import { faCaretUp, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useRef, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
@@ -116,9 +116,20 @@ function App() {
         </section>
 
         <section className='flex flex-col min-h-screen z-10 p-8 md:p-16' id='resume'>
-          <h1 className="text-4xl font-bold text-white mb-8 text-primary">RESUME</h1>
-          <div className='flex gap-8 border-2 rounded-3xl p-8 border-[var(--primary-color)] bg-gray-800 h-full'>
-            <p>Coming soon ... <FontAwesomeIcon icon={faPersonDigging} /> <FontAwesomeIcon icon={faRoadBarrier} /> <FontAwesomeIcon icon={faTruck} /></p>
+          <h1 className="text-4xl font-bold text-white mb-8 text-primary">RESUMÉ</h1>
+          <div className='flex flex-col gap-8 border-2 rounded-3xl p-8 border-[var(--primary-color)] bg-gray-800 h-full'>
+            <p>
+              Download my CV from <a href="/Pouya_Mahpeikar_CV_EN_2025_08.pdf" className='link' target='_blank'>here</a>
+            </p>
+            <object
+              data="/Pouya_Mahpeikar_CV_EN_2025_08.pdf#toolbar=0&navpanes=0&scrollbar=0"
+              type="application/pdf"
+              className=' w-full h-full'
+            >
+              <p>PDF cannot be displayed.
+                <a href="/Pouya_Mahpeikar_CV_EN_2025_08.pdf">Download instead</a>
+              </p>
+            </object>
           </div>
         </section>
 
