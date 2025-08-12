@@ -115,7 +115,7 @@ function App() {
           </div>
         </section>
 
-        <section className='flex flex-col min-h-screen z-10 p-8 md:p-16' id='resume'>
+        <section className='flex flex-col md:min-h-screen z-10 p-8 md:p-16' id='resume'>
           <h1 className="text-4xl font-bold text-white mb-8 text-primary">RESUMÉ</h1>
           <div className='flex flex-col gap-8 border-2 rounded-3xl p-8 border-[var(--primary-color)] bg-gray-800 h-full'>
             <p>
@@ -124,7 +124,7 @@ function App() {
             <object
               data="/Pouya_Mahpeikar_CV_EN_2025_08.pdf#toolbar=0&navpanes=0&scrollbar=0"
               type="application/pdf"
-              className=' w-full h-full'
+              className='hidden lg:flex w-full h-full'
             >
               <p>PDF cannot be displayed.
                 <a href="/Pouya_Mahpeikar_CV_EN_2025_08.pdf">Download instead</a>
