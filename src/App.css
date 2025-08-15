@@ -28,3 +28,7 @@
 .link  {
   @apply text-[var(--primary-color)] underline;
 }
+
+.section {
+  @apply flex flex-col z-10 p-8 md:p-16 md:pt-3;
+}
