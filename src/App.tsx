@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useRef, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './App.css';
+import makespaceLogo from './assets/Uppsalamakerspace.png';
 import { PhotoGallery } from './components/PhotoGallery';
 import './fa-icons'; // Import your icon library
 import { getSketchingPhotos, getWoodWorkingPhotos } from './photos';
@@ -94,15 +95,41 @@ function App() {
         <section className='section' id='portfolio'>
           <h1 className="text-4xl font-bold text-white mb-8 text-primary">PORTFOLIO</h1>
           <div className='flex flex-col sm:flex-row gap-8 min-h-min border-2 rounded-3xl p-8 border-[var(--primary-color)] bg-gray-800 h-full'>
-            <div className='w-full h-60 md:w-72 md:h-64 sm bg-white overflow-hidden rounded-2xl'>
-              <img className="bg-white md:scale-120 origin-top-left" src="https://www.uppsalamakerspace.se/wp-content/uploads/2014/05/Uppsalamakerspace_2-01.png"></img>
+            <div className='block w-full'>
+              <div className='flex justify-center items-center bg-white md:min-w-72 md:min-h-72 rounded-2xl'>
+                <img className="origin-top-left" src={makespaceLogo}></img>
+              </div>
             </div>
             <div className='flex flex-col'>
-              <h3 className='text-2xl capitalize mb-6'>Uppsala Makerspace lesson scheduler</h3>
-              <p className='mb-4 flex-1'>
-                A project to assist organizing lessons at Makerspace
+              <h3 className='text-3xl font-bold capitalize mb-6'>Uppsala Makerspace lesson scheduler</h3>
+              <p className='mb-6 flex-1'>
+                This project, "Makerspace," is a full-stack application designed to manage scheduled lessons, proposed time slots, and user interactions with comprehensive authentication and authorization. It demonstrates a modern technology stack deployed on AWS with robust security, testing practices, and dual API architecture supporting both REST and GraphQL.
               </p>
-              <div className='flex flex-col'>
+              <h3 className='text-2xl font-bold capitalize mb-2'>Background</h3>
+              <p className='mb-6 flex-1'>
+                There are lessons in makerspace offered by skilled members for new members to learn how to use the machinery in the workshops (a.k.a introdution lessons) and other lessons for a specific skill. There's no system to organize these lessons. Members usually write to a Slack channel and show their interest. A instructor announces a lesson in the channel and suggested a few time slots. Members have to have an eye on the channel and hope for the best to match their time with one of suggested times. If you miss it, you might be lucky next time!
+              </p>
+              <h3 className='text-2xl font-bold capitalize mb-2'>Solution</h3>
+              <p className='mb-6 flex-1'>
+                This app makes it easy for instructors and members. Here's what can be done with Uppsala Makerspace lesson scheduler:
+              </p>
+              <div className='md:px-8'>
+                <span>As a member:</span>
+                <ul className='list-disc list-inside'>
+                  <li>Register an account</li>
+                  <li>See workshops, activities, lessons, scheduled lessons and proposed time slots</li>
+                  <li>Apply for desired lessons</li>
+                  <li>Vote for proposed time slots</li>
+                  <li>Get notified when a new lesson is scheduled or a scheduled lesson gets start time</li>
+                </ul>
+                <span className='block mt-3'>As an instructor:</span>
+                <ul className='list-disc list-inside'>
+                  <li>See, add and modify workshops, activities, lessons, scheduled lessons and proposed time slots</li>
+                  <li>Register vote for members</li>
+                  <li>Choose a start time from proposed time slots based on the votes</li>
+                </ul>
+              </div>
+              <div className='flex flex-col mt-8'>
                 <span>
                   Live demo: <Link to={'https://master.d31o1td403e37h.amplifyapp.com/'} target='_blank' className='link'>here</Link>
                 </span>
@@ -118,17 +145,15 @@ function App() {
           <h1 className="text-4xl font-bold text-white mb-8 text-primary">RESUMÉ</h1>
           <div className='flex flex-col gap-8 border-2 rounded-3xl p-8 border-[var(--primary-color)] bg-gray-800 h-full md:min-h-screen'>
             <p>
-              Download my CV from <a href="/Pouya_Mahpeikar_CV_EN_2025_08.pdf" className='link' target='_blank'>here</a>
+              Download my CV from <a href="/Pouya_Mahpeikar_CV_EN_2025_09.pdf" className='link' target='_blank'>here</a>
             </p>
-            <object
-              data="/Pouya_Mahpeikar_CV_EN_2025_08.pdf#toolbar=0&navpanes=0&scrollbar=0"
-              type="application/pdf"
-              className='hidden lg:flex w-full h-full'
-            >
-              <p>PDF cannot be displayed.
-                <a href="/Pouya_Mahpeikar_CV_EN_2025_08.pdf">Download instead</a>
-              </p>
-            </object>
+            <iframe
+              src={`https://docs.google.com/gview?url=${encodeURIComponent(
+                "https://pouya.mahpeikar.se/Pouya_Mahpeikar_CV_EN_2025_09.pdf"
+              )}&embedded=true`}
+              className="w-full h-screen"
+              frameBorder="0"
+            />
           </div>
         </section>
 
