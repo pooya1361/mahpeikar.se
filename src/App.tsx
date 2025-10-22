@@ -94,48 +94,80 @@ function App() {
 
         <section className='section' id='portfolio'>
           <h1 className="text-4xl font-bold text-white mb-8 text-primary">PORTFOLIO</h1>
-          <div className='flex flex-col sm:flex-row gap-8 min-h-min border-2 rounded-3xl p-8 border-[var(--primary-color)] bg-gray-800 h-full'>
-            <div className='block w-full'>
-              <div className='flex justify-center items-center bg-white md:min-w-72 md:min-h-72 rounded-2xl'>
-                <img className="origin-top-left" src={makespaceLogo}></img>
+          <div className='flex flex-col gap-8 min-h-min border-2 rounded-3xl p-8 border-[var(--primary-color)] bg-gray-800 h-full'>
+            <div className='flex flex-col sm:flex-row gap-8 min-h-min bg-gray-800 h-full'>
+              <div className='block w-full max-w-72'>
+                <div className='flex justify-center items-center bg-white md:min-w-72 md:min-h-72 rounded-2xl'>
+                  <img className="origin-top-left" src={makespaceLogo}></img>
+                </div>
+              </div>
+              <div className='flex flex-col'>
+                <h3 className='text-3xl font-bold capitalize mb-6'>Uppsala Makerspace lesson scheduler</h3>
+                <p className='mb-6 flex-1'>
+                  This project, "Makerspace," is a full-stack application designed to manage scheduled lessons, proposed time slots, and user interactions with comprehensive authentication and authorization. It demonstrates a modern technology stack deployed on AWS with robust security, testing practices, and dual API architecture supporting both REST and GraphQL.
+                </p>
+                <h3 className='text-2xl font-bold capitalize mb-2'>Background</h3>
+                <p className='mb-6 flex-1'>
+                  There are lessons in makerspace offered by skilled members for new members to learn how to use the machinery in the workshops (a.k.a introdution lessons) and other lessons for a specific skill. There's no system to organize these lessons. Members usually write to a Slack channel and show their interest. A instructor announces a lesson in the channel and suggested a few time slots. Members have to have an eye on the channel and hope for the best to match their time with one of suggested times. If you miss it, you might be lucky next time!
+                </p>
+                <h3 className='text-2xl font-bold capitalize mb-2'>Solution</h3>
+                <p className='mb-6 flex-1'>
+                  This app makes it easy for instructors and members. Here's what can be done with Uppsala Makerspace lesson scheduler:
+                </p>
+                <div className='md:px-8'>
+                  <span>As a member:</span>
+                  <ul className='list-disc list-inside'>
+                    <li>Register an account</li>
+                    <li>See workshops, activities, lessons, scheduled lessons and proposed time slots</li>
+                    <li>Apply for desired lessons</li>
+                    <li>Vote for proposed time slots</li>
+                    <li>Get notified when a new lesson is scheduled or a scheduled lesson gets start time</li>
+                  </ul>
+                  <span className='block mt-3'>As an instructor:</span>
+                  <ul className='list-disc list-inside'>
+                    <li>See, add and modify workshops, activities, lessons, scheduled lessons and proposed time slots</li>
+                    <li>Register vote for members</li>
+                    <li>Choose a start time from proposed time slots based on the votes</li>
+                  </ul>
+                </div>
+                <div className='flex flex-col mt-8'>
+                  <span>
+                    Live demo: <Link to={'https://makerspace.mahpeikar.se/'} target='_blank' className='link'>here</Link>
+                  </span>
+                  <span>
+                    Source code and descriptions on my <Link to={'https://github.com/pooya1361/makerspace'} target='_blank' className='link'>github</Link>
+                  </span>
+                </div>
               </div>
             </div>
-            <div className='flex flex-col'>
-              <h3 className='text-3xl font-bold capitalize mb-6'>Uppsala Makerspace lesson scheduler</h3>
-              <p className='mb-6 flex-1'>
-                This project, "Makerspace," is a full-stack application designed to manage scheduled lessons, proposed time slots, and user interactions with comprehensive authentication and authorization. It demonstrates a modern technology stack deployed on AWS with robust security, testing practices, and dual API architecture supporting both REST and GraphQL.
-              </p>
-              <h3 className='text-2xl font-bold capitalize mb-2'>Background</h3>
-              <p className='mb-6 flex-1'>
-                There are lessons in makerspace offered by skilled members for new members to learn how to use the machinery in the workshops (a.k.a introdution lessons) and other lessons for a specific skill. There's no system to organize these lessons. Members usually write to a Slack channel and show their interest. A instructor announces a lesson in the channel and suggested a few time slots. Members have to have an eye on the channel and hope for the best to match their time with one of suggested times. If you miss it, you might be lucky next time!
-              </p>
-              <h3 className='text-2xl font-bold capitalize mb-2'>Solution</h3>
-              <p className='mb-6 flex-1'>
-                This app makes it easy for instructors and members. Here's what can be done with Uppsala Makerspace lesson scheduler:
-              </p>
-              <div className='md:px-8'>
-                <span>As a member:</span>
-                <ul className='list-disc list-inside'>
-                  <li>Register an account</li>
-                  <li>See workshops, activities, lessons, scheduled lessons and proposed time slots</li>
-                  <li>Apply for desired lessons</li>
-                  <li>Vote for proposed time slots</li>
-                  <li>Get notified when a new lesson is scheduled or a scheduled lesson gets start time</li>
-                </ul>
-                <span className='block mt-3'>As an instructor:</span>
-                <ul className='list-disc list-inside'>
-                  <li>See, add and modify workshops, activities, lessons, scheduled lessons and proposed time slots</li>
-                  <li>Register vote for members</li>
-                  <li>Choose a start time from proposed time slots based on the votes</li>
-                </ul>
+            <div className='border border-[var(--primary-color)]'></div>
+            <div className='flex flex-col sm:flex-row gap-8 min-h-min rounded-3xl border-[var(--primary-color)] bg-gray-800 h-full'>
+              <div className='block w-full max-w-72'>
+                <div className='flex justify-center items-center bg-white md:min-w-72 md:min-h-72 rounded-2xl'>
+                  <img className="origin-top-left" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/25.svg"></img>
+                </div>
               </div>
-              <div className='flex flex-col mt-8'>
-                <span>
-                  Live demo: <Link to={'https://master.d31o1td403e37h.amplifyapp.com/'} target='_blank' className='link'>here</Link>
-                </span>
-                <span>
-                  Source code and descriptions on my <Link to={'https://github.com/pooya1361/makerspace'} target='_blank' className='link'>github</Link>
-                </span>
+              <div className='flex flex-col'>
+                <h3 className='text-3xl font-bold capitalize mb-6'>Pokémon viewer</h3>
+                <p className='mb-6 flex-1'>
+                  A fun project to refresh my Angular programming skills. The data is provided by <Link target='_blank' className='link' to="https://pokeapi.co/">PokéAPI</Link>.
+                  Users can browse Pokémon, view detailed information, and explore evolution chains.
+                </p>
+                <h4 className="text-2xl mb-3" dir="auto">Tech stack</h4>
+                <ul dir="auto">
+                  <li>⚡ Angular 20</li>
+                  <li>🎨 TailwindCSS 4</li>
+                  <li>🔄 RxJS 7</li>
+                  <li>🌐 Zone.js 0.15</li>
+                </ul>
+                <div className='flex flex-col mt-8'>
+                  <span>
+                    Live demo: <Link to={'https://pokemon-viewer.mahpeikar.se/'} target='_blank' className='link'>here</Link>
+                  </span>
+                  <span>
+                    Source code and descriptions on my <Link to={'https://github.com/pooya1361/pokemon-viewer'} target='_blank' className='link'>github</Link>
+                  </span>
+                </div>
               </div>
             </div>
           </div>
